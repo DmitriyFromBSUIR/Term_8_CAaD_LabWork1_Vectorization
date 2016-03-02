@@ -232,7 +232,7 @@ T** matrixTranspose(T** matrix, int n, int m)
         cout << endl << "Error! Check up the sizes of matrices" << endl;
         return NULL;
     }
-
+    T temp = 0;
 	for (size_t i = 0; i < n; i++)
 	{
 		for (size_t j = 0; j < i; j++)
@@ -242,9 +242,14 @@ T** matrixTranspose(T** matrix, int n, int m)
             b = a - b;
             a = a - b;
             */
+            /*
 			matrix[i][j] = matrix[i][j] + matrix[j][i];
 			matrix[j][i] = matrix[i][j] - matrix[j][i];
 			matrix[i][j] = matrix[i][j] - matrix[j][i];
+			*/
+            temp = matrix[i][j];
+            matrix[i][j] = matrix[j][i];
+            matrix[j][i] = temp;
         }
     }
 	return matrix;
@@ -260,7 +265,7 @@ float** handmadeVectorizationByASM(float** ma, size_t n1, size_t m1, float** mb,
         if( (n1 == m2) && (m1 == n2) )
         {
             // transpose the second matrix
-            mb = matrixTranspose(mb, n2, m2);
+            mb = matrixTranspose<float>(mb, n2, m2);
 
             resultMatrix = memAlloc<float>(n1, m2);
 
@@ -392,6 +397,46 @@ float** handmadeVectorizationByASM(float** ma, size_t n1, size_t m1, float** mb,
     return resultMatrix;
 }
 
+template<typename T>
+bool filesAreIdenteticaly(string filepathIdeal, size_t maRows, size_t maColumns, string filepathAnalysing, size_t mbRows, size_t mbColumns)
+{
+    fstream file1, file2;
+    file1.open(filepathIdeal.c_str(), ios:: in);
+    if(!file1.is_open())
+    {
+        cout << endl << "Error! Can't open file: " << filepathIdeal << endl;
+        return false;
+    }
+    file2.open(filepathIdeal.c_str(), ios:: in);
+    if(!file2.is_open())
+    {
+        cout << endl << "Error! Can't open file: " << filepathAnalysing << endl;
+        return false;
+    }
+    T valueFromFile1, valueFromFile2;
+    if((maRows == maColumns) && (mbRows == mbColumns))
+    {
+        for(size_t i=0; i<maRows*maColumns-1; i++)
+        {
+            file1 >> valueFromFile1;
+            file2 >> valueFromFile2;
+            if(!((valueFromFile1 == valueFromFile2) && (abs(valueFromFile1 - valueFromFile2) <= 0.0001)))
+            {
+                return false;
+            }
+        }
+    }
+    else
+    {
+        cout << endl << "Error!" << endl;
+        return false;
+    }
+
+    file1.close();
+    file2.close();
+    return true;
+}
+
 int main()
 {
     cout << endl << "Vectorization is running!" << endl << endl;
@@ -439,6 +484,9 @@ int main()
 
     matrixFileOutput("matrix_F.txt", ptrMatrixF, N, M);
 
+    bool filesIsEqual = filesAreIdenteticaly<float>("matrix_C.txt", N, M, "matrix_F.txt", N, M);
+
+    cout << endl << "File is equal ? = " << filesIsEqual << endl;
     //long long int processorTicks = time_stop(startTime);
     //cout << endl << endl << "Processor Ticks (HandMade Vectorization By ASM) = " << endl << processorTicks;
 

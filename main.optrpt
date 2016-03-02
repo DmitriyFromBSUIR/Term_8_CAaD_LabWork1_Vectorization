@@ -14,38 +14,38 @@ Begin optimization report for: main()
 
     Report from: Interprocedural optimizations [ipo]
 
-INLINE REPORT: (main()) [1] main.cpp(396,1)
-  -> (397,10) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> (397,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-  -> (397,49) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> (397,57) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> INLINE: (399,26) memAlloc<float>(size_t, size_t, size_t)
-  -> INLINE: (401,26) memAlloc<float>(size_t, size_t, size_t)
-  -> INLINE: (412,18) matrixInit<float>(int, int)
+INLINE REPORT: (main()) [1] main.cpp(441,1)
+  -> (442,10) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (442,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+  -> (442,49) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (442,57) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> INLINE: (444,26) memAlloc<float>(size_t, size_t, size_t)
+  -> INLINE: (446,26) memAlloc<float>(size_t, size_t, size_t)
+  -> INLINE: (457,18) matrixInit<float>(int, int)
     -> INLINE: (197,11) memAlloc<float>(size_t, size_t, size_t)
-  -> INLINE: (413,18) matrixTranspose<float>(float **, int, int)
+  -> INLINE: (458,18) matrixTranspose<float>(float **, int, int)
     -> (232,14) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
     -> (232,22) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
     -> (232,65) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> DELETED: (416,5) std::allocator<char>::~allocator(std::allocator<char> *)
-  -> INLINE: (416,5) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
+  -> DELETED: (461,5) std::allocator<char>::~allocator(std::allocator<char> *)
+  -> INLINE: (461,5) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
      {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
-  -> (416,5) matrixFileOutput<float>(std::string *, float **, size_t, size_t)
-  -> INLINE: (416,22) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
+  -> (461,5) matrixFileOutput<float>(std::string *, float **, size_t, size_t)
+  -> INLINE: (461,22) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
      {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
-  -> DELETED: (416,22) std::allocator<char>::~allocator(std::allocator<char> *)
-  -> DELETED: (416,22) std::allocator<char>::allocator(std::allocator<char> *)
-  -> DELETED: (417,5) std::allocator<char>::~allocator(std::allocator<char> *)
-  -> INLINE: (417,5) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
+  -> DELETED: (461,22) std::allocator<char>::~allocator(std::allocator<char> *)
+  -> DELETED: (461,22) std::allocator<char>::allocator(std::allocator<char> *)
+  -> DELETED: (462,5) std::allocator<char>::~allocator(std::allocator<char> *)
+  -> INLINE: (462,5) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
      {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
-  -> (417,5) matrixFileOutput<float>(std::string *, float **, size_t, size_t)
-  -> INLINE: (417,22) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
+  -> (462,5) matrixFileOutput<float>(std::string *, float **, size_t, size_t)
+  -> INLINE: (462,22) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
      {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
-  -> DELETED: (417,22) std::allocator<char>::~allocator(std::allocator<char> *)
-  -> DELETED: (417,22) std::allocator<char>::allocator(std::allocator<char> *)
-  -> (422,10) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-  -> (422,72) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> INLINE: (423,18) matrixMultAutoVect<float>(float **, size_t, size_t, float **, size_t, size_t)
+  -> DELETED: (462,22) std::allocator<char>::~allocator(std::allocator<char> *)
+  -> DELETED: (462,22) std::allocator<char>::allocator(std::allocator<char> *)
+  -> (467,10) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+  -> (467,72) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> INLINE: (468,18) matrixMultAutoVect<float>(float **, size_t, size_t, float **, size_t, size_t)
     -> INLINE: (118,28) memAlloc<float>(size_t, size_t, size_t)
     -> INLINE: (119,39) time_start()
       -> INLINE: (101,20) time_RDTSC()
@@ -64,10 +64,10 @@ INLINE REPORT: (main()) [1] main.cpp(396,1)
     -> (143,14) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
     -> (143,22) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
     -> (143,56) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> (424,10) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> (424,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-  -> (424,83) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> INLINE: (425,18) matrixMult<float>(float **, size_t, size_t, float **, size_t, size_t)
+  -> (469,10) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (469,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+  -> (469,83) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> INLINE: (470,18) matrixMult<float>(float **, size_t, size_t, float **, size_t, size_t)
     -> INLINE: (158,28) memAlloc<float>(size_t, size_t, size_t)
     -> INLINE: (159,39) time_start()
       -> INLINE: (101,20) time_RDTSC()
@@ -86,143 +86,168 @@ INLINE REPORT: (main()) [1] main.cpp(396,1)
     -> (186,14) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
     -> (186,22) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
     -> (186,56) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> DELETED: (427,5) std::allocator<char>::~allocator(std::allocator<char> *)
-  -> INLINE: (427,5) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
+  -> DELETED: (472,5) std::allocator<char>::~allocator(std::allocator<char> *)
+  -> INLINE: (472,5) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
      {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
-  -> (427,5) matrixFileOutput<float>(std::string *, float **, size_t, size_t)
-  -> INLINE: (427,22) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
+  -> (472,5) matrixFileOutput<float>(std::string *, float **, size_t, size_t)
+  -> INLINE: (472,22) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
      {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
-  -> DELETED: (427,22) std::allocator<char>::~allocator(std::allocator<char> *)
-  -> DELETED: (427,22) std::allocator<char>::allocator(std::allocator<char> *)
-  -> (433,10) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> (433,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-  -> (433,91) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> INLINE: (438,18) handmadeVectorizationByASM(float **, size_t, size_t, float **, size_t, size_t)
-    -> INLINE: (263,18) matrixTranspose<float>(float **, int, int)
+  -> DELETED: (472,22) std::allocator<char>::~allocator(std::allocator<char> *)
+  -> DELETED: (472,22) std::allocator<char>::allocator(std::allocator<char> *)
+  -> (478,10) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (478,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+  -> (478,91) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> INLINE: (483,18) handmadeVectorizationByASM(float **, size_t, size_t, float **, size_t, size_t)
+    -> INLINE: (268,18) matrixTranspose<float>(float **, int, int)
       -> (232,14) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
       -> (232,22) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
       -> (232,65) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-    -> INLINE: (265,28) memAlloc<float>(size_t, size_t, size_t)
-    -> INLINE: (271,39) time_start()
+    -> INLINE: (270,28) memAlloc<float>(size_t, size_t, size_t)
+    -> INLINE: (276,39) time_start()
       -> INLINE: (101,20) time_RDTSC()
-    -> INLINE: (374,30) time_stop(long long)
+    -> INLINE: (379,30) time_stop(long long)
       -> INLINE: (107,13) time_RDTSC()
-    -> (375,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-    -> (375,85) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-    -> (376,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-    -> (376,76) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, long long)
-    -> (376,94) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-    -> (377,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-    -> (377,85) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-    -> (381,18) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-    -> (381,26) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-    -> (381,69) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-    -> (387,14) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-    -> (387,22) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-    -> (387,56) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> DELETED: (440,5) std::allocator<char>::~allocator(std::allocator<char> *)
-  -> INLINE: (440,5) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
+    -> (380,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+    -> (380,85) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+    -> (381,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+    -> (381,76) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, long long)
+    -> (381,94) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+    -> (382,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+    -> (382,85) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+    -> (386,18) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+    -> (386,26) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+    -> (386,69) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+    -> (392,14) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+    -> (392,22) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+    -> (392,56) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> DELETED: (485,5) std::allocator<char>::~allocator(std::allocator<char> *)
+  -> INLINE: (485,5) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
      {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
-  -> (440,5) matrixFileOutput<float>(std::string *, float **, size_t, size_t)
-  -> INLINE: (440,22) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
+  -> (485,5) matrixFileOutput<float>(std::string *, float **, size_t, size_t)
+  -> INLINE: (485,22) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
      {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
-  -> DELETED: (440,22) std::allocator<char>::~allocator(std::allocator<char> *)
-  -> DELETED: (440,22) std::allocator<char>::allocator(std::allocator<char> *)
-  -> (451,10) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> (451,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-  -> (451,90) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> (451,98) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> DELETED: (485,22) std::allocator<char>::~allocator(std::allocator<char> *)
+  -> DELETED: (485,22) std::allocator<char>::allocator(std::allocator<char> *)
+  -> DELETED: (487,10) std::allocator<char>::~allocator(std::allocator<char> *)
+  -> DELETED: (487,10) std::allocator<char>::~allocator(std::allocator<char> *)
+  -> INLINE: (487,10) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (487,10) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> (487,25) filesAreIdenteticaly<float>(std::string *, size_t, size_t, std::string *, size_t, size_t)
+  -> INLINE: (487,53) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> DELETED: (487,53) std::allocator<char>::~allocator(std::allocator<char> *)
+  -> DELETED: (487,53) std::allocator<char>::allocator(std::allocator<char> *)
+  -> INLINE: (487,75) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char>> *)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> DELETED: (487,75) std::allocator<char>::~allocator(std::allocator<char> *)
+  -> DELETED: (487,75) std::allocator<char>::allocator(std::allocator<char> *)
+  -> (498,10) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (498,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+  -> (498,90) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (498,98) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
 
 
     Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
 
 
-LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(399,26)
+LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(444,26)
    remark #15520: loop was not vectorized: loop with early exits cannot be vectorized unless it meets search loop idiom criteria
 LOOP END
 
-LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(401,26)
+LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(446,26)
    remark #15520: loop was not vectorized: loop with early exits cannot be vectorized unless it meets search loop idiom criteria
 LOOP END
 
-LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(412,18)
+LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(457,18)
    remark #15520: loop was not vectorized: loop with early exits cannot be vectorized unless it meets search loop idiom criteria
 LOOP END
 
-LOOP BEGIN at main.cpp(199,2) inlined into main.cpp(412,18)
+LOOP BEGIN at main.cpp(199,2) inlined into main.cpp(457,18)
    remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
    remark #15346: vector dependence: assumed OUTPUT dependence between  line 203 and  line 203
 
-   LOOP BEGIN at main.cpp(201,3) inlined into main.cpp(412,18)
+   LOOP BEGIN at main.cpp(201,3) inlined into main.cpp(457,18)
       remark #15527: loop was not vectorized: function call to rand() cannot be vectorized   [ main.cpp(203,23) ]
    LOOP END
 LOOP END
 
-LOOP BEGIN at main.cpp(236,2) inlined into main.cpp(413,18)
+LOOP BEGIN at main.cpp(236,2) inlined into main.cpp(458,18)
    remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
-   remark #15346: vector dependence: assumed OUTPUT dependence between  line 245 and  line 247
+   remark #15346: vector dependence: assumed ANTI dependence between  line 250 and  line 252
 
-   LOOP BEGIN at main.cpp(238,3) inlined into main.cpp(413,18)
+   LOOP BEGIN at main.cpp(238,3) inlined into main.cpp(458,18)
       remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
-      remark #15346: vector dependence: assumed OUTPUT dependence between  line 245 and  line 247
+      remark #15346: vector dependence: assumed ANTI dependence between  line 250 and  line 252
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at main.cpp(238,3) inlined into main.cpp(458,18)
+   <Remainder>
    LOOP END
 LOOP END
 
-LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(423,18)
+LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(468,18)
    remark #15520: loop was not vectorized: loop with early exits cannot be vectorized unless it meets search loop idiom criteria
 LOOP END
 
-LOOP BEGIN at main.cpp(120,13) inlined into main.cpp(423,18)
+LOOP BEGIN at main.cpp(120,13) inlined into main.cpp(468,18)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at main.cpp(122,17) inlined into main.cpp(423,18)
+   LOOP BEGIN at main.cpp(122,17) inlined into main.cpp(468,18)
       remark #15542: loop was not vectorized: inner loop was already vectorized
 
-      LOOP BEGIN at main.cpp(124,21) inlined into main.cpp(423,18)
+      LOOP BEGIN at main.cpp(124,21) inlined into main.cpp(468,18)
          remark #15300: LOOP WAS VECTORIZED
       LOOP END
 
-      LOOP BEGIN at main.cpp(124,21) inlined into main.cpp(423,18)
+      LOOP BEGIN at main.cpp(124,21) inlined into main.cpp(468,18)
       <Remainder>
          remark #25436: completely unrolled by 1  
       LOOP END
    LOOP END
 LOOP END
 
-LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(425,18)
+LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(470,18)
    remark #15520: loop was not vectorized: loop with early exits cannot be vectorized unless it meets search loop idiom criteria
 LOOP END
 
-LOOP BEGIN at main.cpp(162,13) inlined into main.cpp(425,18)
+LOOP BEGIN at main.cpp(162,13) inlined into main.cpp(470,18)
    remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
    remark #15346: vector dependence: assumed OUTPUT dependence between  line 169 and  line 169
 
-   LOOP BEGIN at main.cpp(164,17) inlined into main.cpp(425,18)
+   LOOP BEGIN at main.cpp(164,17) inlined into main.cpp(470,18)
       remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
       remark #15346: vector dependence: assumed OUTPUT dependence between  line 169 and  line 169
 
-      LOOP BEGIN at main.cpp(167,21) inlined into main.cpp(425,18)
+      LOOP BEGIN at main.cpp(167,21) inlined into main.cpp(470,18)
          remark #15319: loop was not vectorized: novector directive used
          remark #25439: unrolled with remainder by 2  
       LOOP END
 
-      LOOP BEGIN at main.cpp(167,21) inlined into main.cpp(425,18)
+      LOOP BEGIN at main.cpp(167,21) inlined into main.cpp(470,18)
       <Remainder>
       LOOP END
    LOOP END
 LOOP END
 
-LOOP BEGIN at main.cpp(236,2) inlined into main.cpp(438,18)
+LOOP BEGIN at main.cpp(236,2) inlined into main.cpp(483,18)
    remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
-   remark #15346: vector dependence: assumed OUTPUT dependence between  line 245 and  line 247
+   remark #15346: vector dependence: assumed ANTI dependence between  line 250 and  line 252
 
-   LOOP BEGIN at main.cpp(238,3) inlined into main.cpp(438,18)
+   LOOP BEGIN at main.cpp(238,3) inlined into main.cpp(483,18)
       remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
-      remark #15346: vector dependence: assumed OUTPUT dependence between  line 245 and  line 247
+      remark #15346: vector dependence: assumed ANTI dependence between  line 250 and  line 252
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at main.cpp(238,3) inlined into main.cpp(483,18)
+   <Remainder>
    LOOP END
 LOOP END
 
-LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(438,18)
+LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(483,18)
    remark #15520: loop was not vectorized: loop with early exits cannot be vectorized unless it meets search loop idiom criteria
 LOOP END
 
@@ -230,14 +255,14 @@ LOOP END
 Non-optimizable loops:
 
 
-LOOP BEGIN at main.cpp(274,13) inlined into main.cpp(438,18)
+LOOP BEGIN at main.cpp(279,13) inlined into main.cpp(483,18)
    remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.
 
-   LOOP BEGIN at main.cpp(276,17) inlined into main.cpp(438,18)
+   LOOP BEGIN at main.cpp(281,17) inlined into main.cpp(483,18)
       remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.
 
-      LOOP BEGIN at main.cpp(302,0) inlined into main.cpp(438,18)
-         remark #15526: loop was not vectorized: ASM code cannot be vectorized   [ main.cpp(302,0) ]
+      LOOP BEGIN at main.cpp(307,0) inlined into main.cpp(483,18)
+         remark #15526: loop was not vectorized: ASM code cannot be vectorized   [ main.cpp(307,0) ]
       LOOP END
    LOOP END
 LOOP END
@@ -247,7 +272,7 @@ Begin optimization report for: matrixFileOutput<float>(std::string *, float **, 
 
     Report from: Interprocedural optimizations [ipo]
 
-INLINE REPORT: (matrixFileOutput<float>(std::string *, float **, size_t, size_t)) [5] main.cpp(67,1)
+INLINE REPORT: (matrixFileOutput<float>(std::string *, float **, size_t, size_t)) [8] main.cpp(67,1)
   -> (68,13) std::basic_fstream<char, std::char_traits<char>>::~basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
   -> INLINE: (68,13) std::basic_fstream<char, std::char_traits<char>>::basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
      {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
@@ -291,11 +316,90 @@ LOOP BEGIN at main.cpp(75,5)
 LOOP END
 ===========================================================================
 
+Begin optimization report for: filesAreIdenteticaly<float>(std::string *, size_t, size_t, std::string *, size_t, size_t)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (filesAreIdenteticaly<float>(std::string *, size_t, size_t, std::string *, size_t, size_t)) [12] main.cpp(402,1)
+  -> (403,13) std::basic_fstream<char, std::char_traits<char>>::~basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+  -> INLINE: (403,13) std::basic_fstream<char, std::char_traits<char>>::basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> (403,20) std::basic_fstream<char, std::char_traits<char>>::~basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+  -> INLINE: (403,20) std::basic_fstream<char, std::char_traits<char>>::basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (404,11) std::basic_fstream<char, std::char_traits<char>>::open(std::basic_fstream<char, std::char_traits<char>> *, const char *, std::ios_base::openmode)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (404,30) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::c_str(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> *) const
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (405,15) std::basic_fstream<char, std::char_traits<char>>::is_open(std::basic_fstream<char, std::char_traits<char>> *)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> (407,14) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (407,22) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+  -> (407,52) std::operator<<<char, std::char_traits<char>, std::allocator<char>>(std::basic_ostream<char, std::char_traits<char>> &, const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &)
+  -> (407,69) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> INLINE: (408,9) std::basic_fstream<char, std::char_traits<char>>::~basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (408,9) std::basic_fstream<char, std::char_traits<char>>::~basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (410,11) std::basic_fstream<char, std::char_traits<char>>::open(std::basic_fstream<char, std::char_traits<char>> *, const char *, std::ios_base::openmode)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (410,30) std::basic_string<char, std::char_traits<char>, std::allocator<char>>::c_str(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> *) const
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (411,15) std::basic_fstream<char, std::char_traits<char>>::is_open(std::basic_fstream<char, std::char_traits<char>> *)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> (413,14) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (413,22) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+  -> (413,52) std::operator<<<char, std::char_traits<char>, std::allocator<char>>(std::basic_ostream<char, std::char_traits<char>> &, const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &)
+  -> (413,73) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> INLINE: (414,9) std::basic_fstream<char, std::char_traits<char>>::~basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (414,9) std::basic_fstream<char, std::char_traits<char>>::~basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> (421,19) std::basic_istream<char, std::char_traits<char>>::operator>>(std::basic_istream<char, std::char_traits<char>> *, float &)
+  -> (422,19) std::basic_istream<char, std::char_traits<char>>::operator>>(std::basic_istream<char, std::char_traits<char>> *, float &)
+  -> INLINE: (423,57) std::abs(float)
+  -> INLINE: (425,17) std::basic_fstream<char, std::char_traits<char>>::~basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (425,17) std::basic_fstream<char, std::char_traits<char>>::~basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> (431,14) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (431,22) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+  -> (431,34) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> INLINE: (432,9) std::basic_fstream<char, std::char_traits<char>>::~basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (432,9) std::basic_fstream<char, std::char_traits<char>>::~basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (435,11) std::basic_fstream<char, std::char_traits<char>>::close(std::basic_fstream<char, std::char_traits<char>> *)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (436,11) std::basic_fstream<char, std::char_traits<char>>::close(std::basic_fstream<char, std::char_traits<char>> *)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (437,5) std::basic_fstream<char, std::char_traits<char>>::~basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+  -> INLINE: (437,5) std::basic_fstream<char, std::char_traits<char>>::~basic_fstream(std::basic_fstream<char, std::char_traits<char>> *const)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at main.cpp(419,9)
+   remark #15523: loop was not vectorized: cannot compute loop iteration count before executing the loop.
+LOOP END
+
+Fusion of IFs performed in _Z20filesAreIdenteticalyIfEbSsjjSsjj at line 93
+
+Fusion of IFs performed in _Z20filesAreIdenteticalyIfEbSsjjSsjj at line 104
+
+Fusion of IFs performed in _Z20filesAreIdenteticalyIfEbSsjjSsjj at line 93
+
+Fusion of IFs performed in _Z20filesAreIdenteticalyIfEbSsjjSsjj at line 104
+===========================================================================
+
 Begin optimization report for: time_RDTSC()
 
     Report from: Interprocedural optimizations [ipo]
 
-INLINE REPORT: (time_RDTSC()) [24] main.cpp(88,1)
+INLINE REPORT: (time_RDTSC()) [26] main.cpp(88,1)
 
 ===========================================================================
 
@@ -303,7 +407,7 @@ Begin optimization report for: time_start()
 
     Report from: Interprocedural optimizations [ipo]
 
-INLINE REPORT: (time_start()) [25] main.cpp(99,1)
+INLINE REPORT: (time_start()) [27] main.cpp(99,1)
   -> INLINE: (101,20) time_RDTSC()
 
 ===========================================================================
@@ -312,45 +416,50 @@ Begin optimization report for: handmadeVectorizationByASM(float **, size_t, size
 
     Report from: Interprocedural optimizations [ipo]
 
-INLINE REPORT: (handmadeVectorizationByASM(float **, size_t, size_t, float **, size_t, size_t)) [26] main.cpp(255,1)
-  -> INLINE: (263,18) matrixTranspose<float>(float **, int, int)
+INLINE REPORT: (handmadeVectorizationByASM(float **, size_t, size_t, float **, size_t, size_t)) [28] main.cpp(260,1)
+  -> INLINE: (268,18) matrixTranspose<float>(float **, int, int)
     -> (232,14) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
     -> (232,22) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
     -> (232,65) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> INLINE: (265,28) memAlloc<float>(size_t, size_t, size_t)
-  -> INLINE: (271,39) time_start()
+  -> INLINE: (270,28) memAlloc<float>(size_t, size_t, size_t)
+  -> INLINE: (276,39) time_start()
     -> INLINE: (101,20) time_RDTSC()
-  -> INLINE: (374,30) time_stop(long long)
+  -> INLINE: (379,30) time_stop(long long)
     -> INLINE: (107,13) time_RDTSC()
-  -> (375,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-  -> (375,85) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> (376,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-  -> (376,76) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, long long)
-  -> (376,94) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> (377,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-  -> (377,85) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> (381,18) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> (381,26) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-  -> (381,69) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> (387,14) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
-  -> (387,22) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
-  -> (387,56) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (380,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+  -> (380,85) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (381,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+  -> (381,76) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, long long)
+  -> (381,94) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (382,18) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+  -> (382,85) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (386,18) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (386,26) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+  -> (386,69) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (392,14) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
+  -> (392,22) std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>> &, const char *)
+  -> (392,56) std::basic_ostream<char, std::char_traits<char>>::operator<<(std::basic_ostream<char, std::char_traits<char>> *, std::basic_ostream<char, std::char_traits<char>>::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char>>::__ostream_type &))
 
 
     Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
 
 
-LOOP BEGIN at main.cpp(236,2) inlined into main.cpp(263,18)
+LOOP BEGIN at main.cpp(236,2) inlined into main.cpp(268,18)
    remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
-   remark #15346: vector dependence: assumed ANTI dependence between  line 245 and  line 247
+   remark #15346: vector dependence: assumed ANTI dependence between  line 250 and  line 252
 
-   LOOP BEGIN at main.cpp(238,3) inlined into main.cpp(263,18)
+   LOOP BEGIN at main.cpp(238,3) inlined into main.cpp(268,18)
       remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
-      remark #15346: vector dependence: assumed ANTI dependence between  line 245 and  line 247
+      remark #15346: vector dependence: assumed ANTI dependence between  line 250 and  line 252
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at main.cpp(238,3) inlined into main.cpp(268,18)
+   <Remainder>
    LOOP END
 LOOP END
 
-LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(265,28)
+LOOP BEGIN at main.cpp(26,5) inlined into main.cpp(270,28)
    remark #15520: loop was not vectorized: loop with early exits cannot be vectorized unless it meets search loop idiom criteria
 LOOP END
 
@@ -358,14 +467,14 @@ LOOP END
 Non-optimizable loops:
 
 
-LOOP BEGIN at main.cpp(274,13)
+LOOP BEGIN at main.cpp(279,13)
    remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.
 
-   LOOP BEGIN at main.cpp(276,17)
+   LOOP BEGIN at main.cpp(281,17)
       remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.
 
-      LOOP BEGIN at main.cpp(302,0)
-         remark #15526: loop was not vectorized: ASM code cannot be vectorized   [ main.cpp(302,0) ]
+      LOOP BEGIN at main.cpp(307,0)
+         remark #15526: loop was not vectorized: ASM code cannot be vectorized   [ main.cpp(307,0) ]
       LOOP END
    LOOP END
 LOOP END
@@ -407,7 +516,7 @@ Begin optimization report for: __sti__$E()
 
     Report from: Interprocedural optimizations [ipo]
 
-INLINE REPORT: (__sti__$E()) [69] <compiler generated>
+INLINE REPORT: (__sti__$E()) [72] <compiler generated>
 
 ===========================================================================
 
@@ -423,7 +532,7 @@ Begin optimization report for: time_stop(long long)
 
     Report from: Interprocedural optimizations [ipo]
 
-INLINE REPORT: (time_stop(long long)) [71] main.cpp(106,1)
+INLINE REPORT: (time_stop(long long)) [74] main.cpp(106,1)
   -> INLINE: (107,13) time_RDTSC()
 
 ===========================================================================

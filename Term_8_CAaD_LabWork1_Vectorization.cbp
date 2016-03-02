@@ -29,6 +29,7 @@
 			<Add option="-Wall" />
 			<Add option="/EHs" />
 		</Compiler>
+		<Unit filename="Libs.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
