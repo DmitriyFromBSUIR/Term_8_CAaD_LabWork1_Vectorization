@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1456950190 source:/home/dmitry/Projects/Codeblocks_Workspace/Term_8_CAaD_LabWork1_Vectorization/main.cpp
+	"Libs.h"
+
+1456871384 /home/dmitry/Projects/Codeblocks_Workspace/Term_8_CAaD_LabWork1_Vectorization/Libs.h
+	<stdio.h>
+	<stdlib.h>
+	<algorithm>
+	<functional>
+	<string.h>
+	<string>
+	<math.h>
+	<cmath>
+	<iostream>
+	<fstream>
+	<iomanip>
+	<time.h>
+	<ctime>
+	<omp.h>
+	<malloc.h>
+	<smmintrin.h>
+	<emmintrin.h>
+	<xmmintrin.h>
+	<sys/time.h>
+

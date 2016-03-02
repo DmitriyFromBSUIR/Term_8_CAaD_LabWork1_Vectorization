@@ -304,7 +304,7 @@ float** handmadeVectorizationByASM(float** ma, size_t n1, size_t m1, float** mb,
                     Результат (операнд A): b2+b3 | b0+b1 | a2+a3 | a0+a1
                     */
 
-                    __asm {
+                    __asm(".intel_syntax noprefix\n");
                         ;// write the count of loop cycles in the ECX Register
                         mov ecx, cycles
                         ;// load maVector to EAX Register

@@ -1,0 +1,3 @@
+all:
+	gcc -Wall -std=c++11 -O3 -march=corei7 -mintel-syntax -masm=intel -fasm=intel mainForGCC.cpp
+	./a.out
