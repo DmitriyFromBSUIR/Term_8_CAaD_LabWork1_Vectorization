@@ -341,9 +341,19 @@ float** handmadeVectorizationByASM(float** ma, size_t n1, size_t m1, float** mb,
                                         movaps xmm0, [esi]
                                         ;// write mb[k][j] to XMM1 Reg
                                         movaps xmm1, [edi]
+
                                         ;// multiply register's values
+
+                                        ;// Performs an SIMD multiply of the four packed single-precision floating-point values from the source operand (second operand)
+                                        ;// and the destination operand (first operand), and stores the packed single-precision floating-point results in the destination
+                                        ;// operand. The source operand can be an XMM register or a 128-bit memory location. The destination operand is an XMM register.
+                                        ;// See Figure 10-5 in the IA-32 Intel Architecture Software Developer's Manual, Volume 1 for an illustration of an SIMD
+                                        ;// single-precision floating-point operation.
                                         mulps xmm0, xmm1 ;// mulps - Multiply Packed Single-Precision Floating-Point Values
                                         ;// mult result write to XMM2
+                                        ;// Performs an SIMD add of the four packed single-precision floating-point values from the source operand (second operand) and
+                                        ;// the destination operand (first operand), and stores the packed single-precision floating-point results in the destination operand.
+                                        ;// The source operand can be an XMM register or a 128-bit memory location. The destination operand is an XMM register.
                                         addps xmm2, xmm0 ;// addps - Add Packed Single-Precision Floating-Point Values
 
                                         //go to the next value
@@ -364,8 +374,8 @@ float** handmadeVectorizationByASM(float** ma, size_t n1, size_t m1, float** mb,
                         ;//    Adds single-precision floating-point values in the third and fourth dword of the source operand and
                         ;//stores the result in the fourth dword of the destination operand.
 
-                        ;//haddps xmm2, xmm2
-                        ;//haddps xmm2, xmm2
+                        haddps xmm2, xmm2
+                        haddps xmm2, xmm2
                         ;//haddps xmm2, xmm2
                         ;//haddps xmm2, xmm2
 
